@@ -55,6 +55,8 @@ flutter:
     - assets/images/homePageIcon/icon-8.png
     - assets/images/homePageIcon/icon-9.png
     - assets/images/homePageIcon/icon-10.png
+    - assets/images/homePageIcon/search-1.png
+    - assets/images/homePageIcon/search-2.png
     - assets/images/loginpageLogo/logo.png
     - assets/images/bookPagePlaceHolder/placeHolder.png
 

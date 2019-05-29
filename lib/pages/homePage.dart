@@ -190,7 +190,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     // padding: EdgeInsets.all(1.0),
                     child: Image.asset(
-                      'assets/images/homePageIcon/icon-7.png',
+                      'assets/images/homePageIcon/search-1.png',
                       scale: 12.5,
                     ),
                     //,
@@ -218,7 +218,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     // padding: EdgeInsets.all(1.0),
                     child: Image.asset(
-                      'assets/images/homePageIcon/icon-7.png',
+                      'assets/images/homePageIcon/search-2.png',
                       scale: 12.5,
                     ),
                     //,
