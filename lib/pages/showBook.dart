@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:bmnav/bmnav.dart' as bmnav;
 
 class ShowBook extends StatelessWidget {
 
@@ -16,37 +17,53 @@ class ShowBook extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.w700, fontFamily: 'IRANYekan')),
         ),
-        bottomNavigationBar: new Container(
+//        bottomNavigationBar: new Container(
+//          color: Colors.green,
+//          child: new Row(
+//            mainAxisAlignment: MainAxisAlignment.spaceAround,
+//            children: <Widget>[
+//              new IconButton(
+//                icon: new Icon(
+//                  Icons.home,
+//                  color: Colors.white,
+//                ),
+//                onPressed: () {
+//                  Navigator.pushReplacementNamed(context, "/homePage");
+//                },
+//              ),
+//              new IconButton(
+//                  icon: new Icon(
+//                    Icons.search,
+//                    color: Colors.white,
+//                  ),
+//                  onPressed: null),
+//              new IconButton(
+//                  icon: new Icon(Icons.favorite, color: Colors.white),
+//                  onPressed: null),
+//              new IconButton(
+//                  icon: new Icon(
+//                    Icons.settings,
+//                    color: Colors.white,
+//                  ),
+//                  onPressed: null),
+//            ],
+//          ),
+//        ),
+        bottomNavigationBar: bmnav.BottomNav(
           color: Colors.green,
-          child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              new IconButton(
-                icon: new Icon(
-                  Icons.home,
-                  color: Colors.white,
-                ),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/homePage");
-                },
-              ),
-              new IconButton(
-                  icon: new Icon(
-                    Icons.search,
-                    color: Colors.white,
-                  ),
-                  onPressed: null),
-              new IconButton(
-                  icon: new Icon(Icons.favorite, color: Colors.white),
-                  onPressed: null),
-              new IconButton(
-                  icon: new Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  ),
-                  onPressed: null),
-            ],
-          ),
+          iconStyle: bmnav.IconStyle(
+              color: Colors.white,
+              onSelectColor: Colors.black),
+          labelStyle: bmnav.LabelStyle(
+              textStyle: TextStyle(fontWeight: FontWeight.w700,fontFamily: 'IRANYekan',color: Colors.white),
+              onSelectTextStyle: TextStyle(color: Colors.black,fontFamily: 'IRANYekan',fontWeight: FontWeight.w700)),
+          items: [
+            bmnav.BottomNavItem(Icons.home, label: 'خانه',),
+            bmnav.BottomNavItem(Icons.add, label: 'یادداشت'),
+            bmnav.BottomNavItem(Icons.navigate_before, label: 'صفحه قبل'),
+            bmnav.BottomNavItem(Icons.navigate_next, label: 'صفحه بعد'),
+            bmnav.BottomNavItem(Icons.pageview, label: 'شماره صفحه'),
+          ],
         ),
         body: new SizedBox(
             height: screenSize.height,
